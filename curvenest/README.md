@@ -1,73 +1,154 @@
-# React + TypeScript + Vite
+# 🛍️ CurveNest — Plus-Size Fashion E-commerce Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CurveNest is a modern, inclusive e-commerce platform dedicated to **plus-size fashion for men and women**.
+Built with **React, TypeScript, Tailwind CSS**, and **Zustand**, the platform delivers a fast, accessible, and professional shopping experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## React Compiler
+### 🛒 Shopping Experience
+- Browse **Men’s, Women’s, and Unisex collections**
+- 25+ curated products with size & color variations
+- Fully functional **Product Details pages**
+- Persistent **Shopping Cart** using Zustand
+- Add, remove, update product quantities
+- Cart persists across page refresh
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🎯 User Interface
+- Clean, responsive UI (mobile-first)
+- Active navbar links with visual indicators
+- "Back to previous page" navigation
+- Accessible components (keyboard & screen-reader friendly)
+- Professional layouts for all pages
 
-## Expanding the ESLint configuration
+### 🔐 Authentication (UI Ready)
+- Login & Signup pages
+- Clean form structure ready for backend integration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 📄 Informational Pages
+- About Us (brand story & mission)
+- Contact page with structured layout
+- SEO-optimized Home page
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### ⚡ Performance & SEO
+- Code splitting with `React.lazy` and `Suspense`
+- SEO management via `react-helmet-async`
+- Optimized routing with React Router v6
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🧱 Tech Stack
+
+| Technology | Purpose |
+|----------|--------|
+| **React** | Frontend UI |
+| **TypeScript** | Type safety |
+| **Vite** | Fast development & builds |
+| **Tailwind CSS** | Styling |
+| **Zustand** | Global state (Cart) |
+| **React Router v6** | Routing |
+| **Lucide Icons** | UI icons |
+| **React Helmet Async** | SEO |
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+│
+├── components/ # Reusable UI components (Navbar, Layout, etc.)
+├── context/ # Zustand stores (cart)
+├── data/ # Product data
+├── pages/ # Route pages (Home, Shop, ProductDetails, Cart...)
+├── types/ # TypeScript interfaces
+├── App.tsx # App routes
+└── main.tsx # Entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/your-username/curvenest.git
+cd curvenest
 ```
+
+### 2️⃣ Install Dependencies
+```bash
+npm install
+```
+
+### 3️⃣ Run Development Server
+```bash
+npm run dev
+```
+
+App will be available at:
+```
+http://localhost:5173
+```
+
+---
+
+## 🛍️ Product Flow
+1. User browses Shop or Category pages
+2. Clicks a product card
+3. Navigates to `/product/:id`
+4. Product details load dynamically
+5. User selects size & color
+6. Adds product to cart
+7. Cart updates instantly & persists
+
+---
+
+## 🔧 State Management (Zustand)
+Centralized cart logic with persistent storage using `zustand/middleware`
+
+Supports:
+- Multiple sizes & colors per product
+- Quantity updates
+- Total price calculation
+
+---
+
+## ♿ Accessibility
+- Semantic HTML
+- Keyboard-friendly navigation
+- ARIA labels where needed
+- High-contrast active states
+
+---
+
+## 🧪 Future Enhancements
+- Backend authentication
+- Payment gateway integration
+- Product reviews & ratings
+- Wishlist functionality
+- Admin dashboard
+- Order history
+- API-driven products
+
+---
+
+## 🤝 Contributing
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Submit a Pull Request
+
+---
+
+## 📄 License
+This project is licensed under the MIT License.
+
+---
+
+## 💬 About CurveNest
+CurveNest exists to celebrate every body.
+We believe fashion should be inclusive, comfortable, and confidence-boosting — without compromise.

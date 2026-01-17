@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ShoppingCart, User, Menu } from "lucide-react";
 import { useCartStore } from "../context/cartStore";
 
@@ -12,21 +12,57 @@ const Header: React.FC = () => {
           CurveNest
         </Link>
         <nav className="hidden md:flex space-x-6">
-          <Link to="/" className="text-gray-700 hover:text-primary">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `transition-colors ${
+                isActive
+                  ? "text-primary font-semibold border-b-2 border-primary"
+                  : "text-gray-700 hover:text-primary"
+              }`
+            }
+          >
             Home
-          </Link>
-          <Link to="/shop" className="text-gray-700 hover:text-primary">
+          </NavLink>
+          <NavLink
+            to="/shop"
+            className={({ isActive }) =>
+              `transition-colors ${
+                isActive
+                  ? "text-primary font-semibold border-b-2 border-primary"
+                  : "text-gray-700 hover:text-primary"
+              }`
+            }
+          >
             Shop
-          </Link>
-          <Link to="/about" className="text-gray-700 hover:text-primary">
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `transition-colors ${
+                isActive
+                  ? "text-primary font-semibold border-b-2 border-primary"
+                  : "text-gray-700 hover:text-primary"
+              }`
+            }
+          >
             About
-          </Link>
-          <Link to="/contact" className="text-gray-700 hover:text-primary">
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `transition-colors ${
+                isActive
+                  ? "text-primary font-semibold border-b-2 border-primary"
+                  : "text-gray-700 hover:text-primary"
+              }`
+            }
+          >
             Contact
-          </Link>
+          </NavLink>
         </nav>
         <div className="flex items-center space-x-4">
-          <Link to="/auth" className="text-gray-700 hover:text-primary">
+          <Link to="/login" className="text-gray-700 hover:text-primary">
             <User size={20} />
           </Link>
           <Link

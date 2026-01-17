@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Minus, Plus, Trash2 } from "lucide-react";
 import { useCartStore } from "../context/cartStore";
+import BackButton from "../components/BackButton";
 
 const Cart: React.FC = () => {
   const { items, updateQuantity, removeItem, getTotalPrice, clearCart } =
@@ -13,6 +14,9 @@ const Cart: React.FC = () => {
     return (
       <main className="min-h-screen py-16">
         <div className="container mx-auto px-4 text-center">
+          <div className="mb-6 flex justify-center">
+            <BackButton />
+          </div>
           <h1 className="text-3xl font-bold mb-8">Your Cart is Empty</h1>
           <p className="text-gray-600 mb-8">Add some items to get started!</p>
           <Link
@@ -29,6 +33,9 @@ const Cart: React.FC = () => {
   return (
     <main className="min-h-screen py-8">
       <div className="container mx-auto px-4">
+        <div className="mb-6">
+          <BackButton />
+        </div>
         <h1 className="text-3xl font-bold mb-8">Shopping Cart</h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
