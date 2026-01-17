@@ -133,6 +133,18 @@ App will be available at:
 http://localhost:5173
 ```
 
+### 🚀 Deployment
+
+#### Vercel Deployment
+
+The project includes an `.npmrc` file with `legacy-peer-deps=true` to resolve peer dependency conflicts during Vercel builds. This ensures compatibility with React 18 and react-helmet-async without requiring dependency downgrades.
+
+To deploy on Vercel:
+1. Connect your repository to Vercel
+2. Vercel will automatically detect the Vite configuration
+3. The build will use the npm settings from `.npmrc`
+4. Deploy successfully without peer dependency errors
+
 ---
 
 ## 🛍️ Product Flow
