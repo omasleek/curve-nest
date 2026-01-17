@@ -5,9 +5,42 @@ Built with **React, TypeScript, Tailwind CSS**, and **Zustand**, the platform de
 
 ---
 
+## 📸 Screenshots
+
+### Home Page
+
+<img src="src/assets/curve.PNG" alt="CurveNest Home Page" width="600">
+
+### Shop Page
+
+<img src="src/assets/curve1.PNG" alt="CurveNest Shop Page" width="600">
+
+### Product Details
+
+<img src="src/assets/curve2.PNG" alt="CurveNest Product Details" width="600">
+
+### Shopping Cart
+
+<img src="src/assets/curve3.PNG" alt="CurveNest Shopping Cart" width="600">
+
+### Authentication
+
+<img src="src/assets/curve5.PNG" alt="CurveNest Login Page" width="600">
+
+### About Page
+
+<img src="src/assets/curve6.PNG" alt="CurveNest About Page" width="600">
+
+### Contact Page
+
+<img src="src/assets/curve7.PNG" alt="CurveNest Contact Page" width="600">
+
+---
+
 ## 🌟 Features
 
 ### 🛒 Shopping Experience
+
 - Browse **Men’s, Women’s, and Unisex collections**
 - 25+ curated products with size & color variations
 - Fully functional **Product Details pages**
@@ -16,6 +49,7 @@ Built with **React, TypeScript, Tailwind CSS**, and **Zustand**, the platform de
 - Cart persists across page refresh
 
 ### 🎯 User Interface
+
 - Clean, responsive UI (mobile-first)
 - Active navbar links with visual indicators
 - "Back to previous page" navigation
@@ -23,15 +57,18 @@ Built with **React, TypeScript, Tailwind CSS**, and **Zustand**, the platform de
 - Professional layouts for all pages
 
 ### 🔐 Authentication (UI Ready)
+
 - Login & Signup pages
 - Clean form structure ready for backend integration
 
 ### 📄 Informational Pages
+
 - About Us (brand story & mission)
 - Contact page with structured layout
 - SEO-optimized Home page
 
 ### ⚡ Performance & SEO
+
 - Code splitting with `React.lazy` and `Suspense`
 - SEO management via `react-helmet-async`
 - Optimized routing with React Router v6
@@ -40,16 +77,16 @@ Built with **React, TypeScript, Tailwind CSS**, and **Zustand**, the platform de
 
 ## 🧱 Tech Stack
 
-| Technology | Purpose |
-|----------|--------|
-| **React** | Frontend UI |
-| **TypeScript** | Type safety |
-| **Vite** | Fast development & builds |
-| **Tailwind CSS** | Styling |
-| **Zustand** | Global state (Cart) |
-| **React Router v6** | Routing |
-| **Lucide Icons** | UI icons |
-| **React Helmet Async** | SEO |
+| Technology             | Purpose                   |
+| ---------------------- | ------------------------- |
+| **React**              | Frontend UI               |
+| **TypeScript**         | Type safety               |
+| **Vite**               | Fast development & builds |
+| **Tailwind CSS**       | Styling                   |
+| **Zustand**            | Global state (Cart)       |
+| **React Router v6**    | Routing                   |
+| **Lucide Icons**       | UI icons                  |
+| **React Helmet Async** | SEO                       |
 
 ---
 
@@ -72,22 +109,26 @@ src/
 ## 🚀 Getting Started
 
 ### 1️⃣ Clone the Repository
+
 ```bash
 git clone https://github.com/your-username/curvenest.git
 cd curvenest
 ```
 
 ### 2️⃣ Install Dependencies
+
 ```bash
 npm install
 ```
 
 ### 3️⃣ Run Development Server
+
 ```bash
 npm run dev
 ```
 
 App will be available at:
+
 ```
 http://localhost:5173
 ```
@@ -95,6 +136,7 @@ http://localhost:5173
 ---
 
 ## 🛍️ Product Flow
+
 1. User browses Shop or Category pages
 2. Clicks a product card
 3. Navigates to `/product/:id`
@@ -106,9 +148,11 @@ http://localhost:5173
 ---
 
 ## 🔧 State Management (Zustand)
+
 Centralized cart logic with persistent storage using `zustand/middleware`
 
 Supports:
+
 - Multiple sizes & colors per product
 - Quantity updates
 - Total price calculation
@@ -116,6 +160,7 @@ Supports:
 ---
 
 ## ♿ Accessibility
+
 - Semantic HTML
 - Keyboard-friendly navigation
 - ARIA labels where needed
@@ -124,6 +169,7 @@ Supports:
 ---
 
 ## 🧪 Future Enhancements
+
 - Backend authentication
 - Payment gateway integration
 - Product reviews & ratings
@@ -135,6 +181,7 @@ Supports:
 ---
 
 ## 🤝 Contributing
+
 Contributions are welcome!
 
 1. Fork the repository
@@ -145,10 +192,12 @@ Contributions are welcome!
 ---
 
 ## 📄 License
+
 This project is licensed under the MIT License.
 
 ---
 
 ## 💬 About CurveNest
+
 CurveNest exists to celebrate every body.
 We believe fashion should be inclusive, comfortable, and confidence-boosting — without compromise.

@@ -3,9 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { Eye, EyeOff, Mail, Lock } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import BackButton from "../components/BackButton";
+import { useAuthStore } from "../context/authStore";
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
+  const login = useAuthStore((state) => state.login);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -28,22 +30,12 @@ const Login: React.FC = () => {
     setIsLoading(true);
     setError("");
 
-    // Mock authentication - in real app, this would call an API
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      // Mock validation
-      if (
-        formData.email === "demo@curvenest.com" &&
-        formData.password === "password"
-      ) {
-        // Success - redirect to shop
+      const success = await login(formData.email, formData.password);
+      if (success) {
         navigate("/shop");
       } else {
-        setError(
-          "Invalid email or password. Try demo@curvenest.com / password",
-        );
+        setError("Invalid email or password. Try demo@curvenest.com / password");
       }
     } catch (err) {
       setError("Login failed. Please try again.");

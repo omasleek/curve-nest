@@ -3,9 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { Eye, EyeOff, User, Mail, Lock, Check } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import BackButton from "../components/BackButton";
+import { useAuthStore } from "../context/authStore";
 
 const Signup: React.FC = () => {
   const navigate = useNavigate();
+  const signup = useAuthStore((state) => state.signup);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -67,16 +69,16 @@ const Signup: React.FC = () => {
       return;
     }
 
-    // Mock signup - in real app, this would call an API
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-
-      // Mock success
-      setSuccess(true);
-      setTimeout(() => {
-        navigate("/shop");
-      }, 2000);
+      const success = await signup(formData.fullName, formData.email, formData.password);
+      if (success) {
+        setSuccess(true);
+        setTimeout(() => {
+          navigate("/shop");
+        }, 2000);
+      } else {
+        setError("Signup failed. Please try again.");
+      }
     } catch (err) {
       setError("Signup failed. Please try again.");
     } finally {

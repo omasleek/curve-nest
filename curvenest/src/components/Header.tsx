@@ -1,7 +1,8 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { ShoppingCart, User, Menu } from "lucide-react";
+import { ShoppingCart, Menu } from "lucide-react";
 import { useCartStore } from "../context/cartStore";
+import UserDropdown from "./UserDropdown";
 
 const Header: React.FC = () => {
   const totalItems = useCartStore((state) => state.getTotalItems());
@@ -62,9 +63,7 @@ const Header: React.FC = () => {
           </NavLink>
         </nav>
         <div className="flex items-center space-x-4">
-          <Link to="/login" className="text-gray-700 hover:text-primary">
-            <User size={20} />
-          </Link>
+          <UserDropdown />
           <Link
             to="/cart"
             className="text-gray-700 hover:text-primary relative"
